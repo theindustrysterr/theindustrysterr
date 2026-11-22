@@ -14,9 +14,12 @@ const pulseSvg = (w, h, stroke = 'url(#g)', opacity = 1) => `
     points="0,100 300,100 330,100 350,60 370,140 390,20 410,180 430,70 450,120 470,100 520,100 540,85 560,115 580,100 1000,100"/>
 </svg>`;
 
+// Profile picture of @playlistpulse.co (black mark on white).
+const LOGO_SRC = 'data:image/jpeg;base64,' + fs.readFileSync(path.join(__dirname, 'assets', 'logo.jpg')).toString('base64');
+
 const logo = `
 <div class="logo">
-  <div class="mark">${pulseSvg(58, 30, '#fff')}</div>
+  <div class="mark"><img src="${LOGO_SRC}" alt=""></div>
   <span>${BRAND}</span>
 </div>`;
 
@@ -35,7 +38,8 @@ body{font-family:'Inter','Inter Display',sans-serif;color:#f5f5f7;background:#07
 .frame{position:absolute;inset:0;padding:${reel ? '250px 96px 430px' : '84px 88px'};display:flex;flex-direction:column}
 .top{display:flex;justify-content:space-between;align-items:center}
 .logo{display:flex;align-items:center;gap:16px;font-weight:800;letter-spacing:.22em;font-size:${reel ? 30 : 24}px}
-.mark{width:${reel ? 76 : 64}px;height:${reel ? 76 : 64}px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,#ff2e88,#8b5cff 55%,#22d3ee)}
+.mark{width:${reel ? 76 : 64}px;height:${reel ? 76 : 64}px;border-radius:18px;display:grid;place-items:center;background:#fff;overflow:hidden;box-shadow:0 0 0 3px rgba(255,255,255,.15),0 8px 30px rgba(139,92,255,.35)}
+.mark img{width:100%;height:100%;object-fit:cover}
 .count{font-size:24px;font-weight:600;color:rgba(255,255,255,.6);letter-spacing:.1em}
 .main{flex:1;display:flex;flex-direction:column;justify-content:center}
 .kicker{display:inline-block;align-self:flex-start;font-size:${reel ? 34 : 26}px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:14px 24px;border-radius:999px;border:2px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);margin-bottom:${reel ? 48 : 40}px}

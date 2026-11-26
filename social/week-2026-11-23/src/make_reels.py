@@ -126,5 +126,5 @@ def build(dir_: pathlib.Path) -> None:
 
 if __name__ == "__main__":
     for d in sorted(OUT.iterdir()):
-        if "reel" in d.name:
+        if any(d.glob("scene-*.png")):
             build(d)

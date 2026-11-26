@@ -41,6 +41,14 @@ const days = [
     { kicker: 'Our results policy', title: 'Only <em>real</em> results. Always.', body: 'We only share campaign results with the artist’s permission. No made-up screenshots, ever.' },
     { kicker: 'Weekly reports', title: 'What we track <em>for you</em>', list: ['Streams & listeners', 'Saves & playlist adds', 'Followers', 'What’s working next'], cta: 'Want to be our next case study? DM “GROW”' },
   ] },
+  { id: '8-wed-tips', highlight: 'TIPS', stories: [
+    { kicker: 'Spotify tip', title: 'Change your Artist Pick <em>every release.</em>', body: 'It’s the first thing visitors see on your profile. Point it at your newest song.' },
+    { kicker: 'Spotify tip', title: 'Add a <em>Canvas.</em>', body: 'A short looping video on your track keeps listeners watching, and listening.', cta: 'Save this story' },
+  ] },
+  { id: '9-thu-start', highlight: 'START HERE', stories: [
+    { kicker: 'Releasing soon?', title: 'Don’t drop it <em>alone.</em>', list: ['Release strategy', 'Playlist pitching', 'Reels & ads', 'Weekly reports'] },
+    { kicker: 'Let’s talk', title: 'DM us <em>“GROW”</em>', body: 'Send your track link, release date and genre. We reply with a plan.', cta: `Message ${HANDLE}` },
+  ] },
 ];
 
 const ICONS = {
